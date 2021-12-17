@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<div>
+  <div>
+    <!-- sidebar -->
   </div>
-  <router-view/>
+
+  <div>
+    <!-- main -->
+    <div class="">
+      <div>
+        <!-- nav -->
+        <div id="nav" class="text-center">
+          <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/">Home</router-link>
+          <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/movies">Movies</router-link>
+          <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/tvShows">TvShows</router-link>
+          <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/anime">Anime</router-link>
+        </div>
+      </div>
+
+      <div>
+        <!-- img -->
+      </div>
+
+      <div>
+        <!-- search -->
+      </div>
+    </div>
+
+    <div>
+      <!-- routerView -->
+      <router-view/>
+    </div>
+  </div>
+
+  <div>
+    <!-- sidebar -->
+  </div>
+</div>  
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
