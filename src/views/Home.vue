@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-gray-700 h-full">
     <h3>Recent Movies</h3>
     <Card />
     <h3>Recent Shows</h3>
