@@ -1,14 +1,14 @@
 <template>
     <div class="font-display">
         <div class="grid grid-cols-5">
-            <aside class="bg-primary h-screen">
+            <aside class="bg-primary h-full">
                 <!-- sidebar -->
                 <SideNav />
             </aside>
 
             <div class="col-span-3">
                 <!-- main -->
-                <div class="bg-secondary h-2/5">
+                <div class="bg-gradient-to-b from-primary via-secondary to-primary h-80">
                     <div>
                         <!-- nav -->
                         <div id="nav" class="text-center">
@@ -20,12 +20,13 @@
                     </div>
 
                     <div class="mt-12 grid place-content-center">
-                        <img src="/assets/logo.png" alt="Logo" />
+                        <input class="rounded-3xl w-full px-24 py-2" type="search" name="search" placeholder="Search" />
                     </div>
 
                     <div class="mt-12 grid place-content-center">
-                        <input class="rounded-3xl w-full px-24 py-2" type="search" name="search" placeholder="Search" />
+                        <img src="./assets/Logo/logo.png" alt="Logo" />
                     </div>
+
                 </div>
 
                 <div>
@@ -34,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="bg-primary h-screen">
+            <div class="bg-primary h-full">
                 <!-- sidebar -->
             </div>
         </div>

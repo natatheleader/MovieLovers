@@ -1,8 +1,18 @@
 <template>
   <div class="bg-primary h-full">
-    <h3 class="text-white p-8 font-bold">Recent Movies</h3>
-    <Card />
-    <h3 class="text-white p-8 font-bold">Recent Shows</h3>
+    <h3 class="text-white p-8 font-bold">Trending Movies</h3>
+    <div class="flex flex-row flex-wrap">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
+    <h3 class="text-white p-8 font-bold">Trending Shows</h3>
     <Card />
   </div>
 </template>
