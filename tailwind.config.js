@@ -25,7 +25,9 @@ module.exports = {
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,
-      pink: colors.pink
+      pink: colors.pink,
+      primary: '#191A1F',
+      secondary: '#C5181C',
     },
     spacing: {
       px: '1px',
@@ -265,7 +267,8 @@ module.exports = {
         '"Liberation Mono"',
         '"Courier New"',
         'monospace'
-      ]
+      ],
+      display: ['Raleway', 'Georgia', 'Cambria'],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

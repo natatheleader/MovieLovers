@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-700 h-full">
-    <h3>Recent Movies</h3>
+  <div class="bg-primary h-full">
+    <h3 class="text-white p-8 font-bold">Recent Movies</h3>
     <Card />
-    <h3>Recent Shows</h3>
+    <h3 class="text-white p-8 font-bold">Recent Shows</h3>
     <Card />
   </div>
 </template>

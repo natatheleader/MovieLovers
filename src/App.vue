@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <div class="font-display">
         <div class="grid grid-cols-5">
-            <aside class="bg-gray-700 h-screen">
+            <aside class="bg-primary h-screen">
                 <!-- sidebar -->
                 <SideNav />
             </aside>
 
             <div class="col-span-3">
                 <!-- main -->
-                <div class="bg-red-600 h-2/5">
+                <div class="bg-secondary h-2/5">
                     <div>
                         <!-- nav -->
                         <div id="nav" class="text-center">
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="bg-gray-700 h-screen">
+            <div class="bg-primary h-screen">
                 <!-- sidebar -->
             </div>
         </div>
