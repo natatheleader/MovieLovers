@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Movies from '../views/Movies.vue'
 import TvShows from '../views/TvShows.vue'
 import Anime from '../views/Anime.vue'
+import MovieDetail from '../views/MovieDetails.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/anime',
     name: 'Anime',
     component: Anime
+  },
+  {
+    path: '/detail',
+    name: 'MovieDetail',
+    component: MovieDetail
   }
 ]
 
