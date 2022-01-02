@@ -27,7 +27,7 @@ const routes = [
     component: Anime
   },
   {
-    path: '/detail',
+    path: '/detail/:id',
     name: 'MovieDetail',
     component: MovieDetail
   }

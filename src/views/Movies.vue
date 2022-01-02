@@ -1,16 +1,23 @@
 <template>
-  <div class="bg-primary h-full">
-    <h3 class="text-white p-8 font-bold">All Movies</h3>
-    <div class="grid grid-cols-4 gap-2">
-      <Card v-for="movie in movies" :key="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
-    </div>
+  <div>
+    <hero />
+    <div>
+      <div class="bg-primary h-full">
+        <h3 class="text-white p-8 font-bold">All Movies</h3>
+        <div class="grid grid-cols-4 gap-2">
+          <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
+        </div>
 
-    <VueTailwindPagination
-      :current="currentPage"
-      :total="total"
-      :per-page="perPage"
-      @page-changed="onPageClick($event)"
-    />
+        <div class="pb-8">
+          <VueTailwindPagination
+            :current="currentPage"
+            :total="total"
+            :per-page="perPage"
+            @page-changed="onPageClick($event)"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,12 +26,14 @@ import Card from '@/components/card.vue'
 import axios from 'axios'
 import '@ocrv/vue-tailwind-pagination/dist/style.css'
 import VueTailwindPagination from '@ocrv/vue-tailwind-pagination'
+import Hero from '@/components/hero.vue'
 
 export default {
   name: 'app',
   components: {
     Card,
-    VueTailwindPagination
+    VueTailwindPagination,
+    Hero
   },
   data () {
     return {

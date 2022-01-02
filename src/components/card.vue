@@ -1,11 +1,11 @@
 <template>
   <div class="m-5 text-white">
-    <router-link to="/detail">
+    <router-link :to='"/detail/" + id'>
       <div class="h-64 min-w-min bg-secondary relative rounded-lg">
         <img class="h-full w-full rounded-lg" :src=image />
         <div class="bg-black bg-opacity-50 absolute inset-x-0 bottom-0 rounded-b-lg">
           <div class="m-1">
-            <p class="text-base font-bold">{{ m_title }}</p>
+            <p class="text-base font-bold">{{ m_title + id}}</p>
             <p v-snip="2"> {{ description }}</p>
             <ul class="flex justify-center">
               <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  props: ['m_title', 'description', 'rating', 'image'],
+  props: ['m_title', 'description', 'rating', 'image', 'id'],
   name: 'Card'
 }
 </script>
