@@ -31,7 +31,9 @@
       <h3 class="text-white p-8 font-bold">Trailer</h3>
       <div class="flex flex-wrap px-8">
         <iframe :src=yt_trailer width="400" height="200" frameborder="0" allowfullscreen></iframe>
-        <img class="w-70 h-40 m-4" :src=movie.background_image_original alt="trailer">
+        <img class="w-70 h-40 m-4" :src=movie.large_screenshot_image1 alt="trailer">
+        <img class="w-70 h-40 m-4" :src=movie.large_screenshot_image2 alt="trailer">
+        <img class="w-70 h-40 m-4" :src=movie.large_screenshot_image3 alt="trailer">
       </div>
 
       <h3 class="text-white pt-8 px-8 pb-4 font-bold">Synopsis</h3>
@@ -45,42 +47,42 @@
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <!-- <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
-                <div class="text-white">
+        <div class="text-white">
           <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
-        </div>
+        </div> -->
       </div>
 
       <h3 class="text-white pt-8 px-8 pb-4 font-bold">Similar Movies</h3>
@@ -104,6 +106,7 @@ export default {
       movie: [],
       related: [],
       genres: [],
+      casts: [],
       yt_trailer: '',
       status: false,
       status_message: '',
@@ -137,12 +140,15 @@ export default {
       this.getData(this.id)
     },
     async getData (id) {
-      await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`).then(response => {
+      await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_images=true&with_cast=true`).then(response => {
         this.movie = response.data.data.movie
         this.genres = this.movie.genres
         this.status = response.data.status
         this.status_message = response.data.status_message
         this.yt_trailer = 'http://www.youtube.com/embed/' + response.data.data.movie.yt_trailer_code
+        this.casts = response.data.data.movie.cast
+        console.log(this.casts)
+        console.log(this.movie)
       }).catch(error => {
         console.log('There is an Error : ' + error.response)
       })
