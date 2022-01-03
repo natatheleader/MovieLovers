@@ -30,9 +30,8 @@
     <div class="bg-primary py-4">
       <h3 class="text-white p-8 font-bold">Trailer</h3>
       <div class="flex flex-wrap px-8">
-        <img class="w-80 m-4" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
-        <img class="w-80 m-4" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
-        <img class="w-80 m-4" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+        <iframe :src=yt_trailer width="400" height="200" frameborder="0" allowfullscreen></iframe>
+        <img class="w-70 h-40 m-4" :src=movie.background_image_original alt="trailer">
       </div>
 
       <h3 class="text-white pt-8 px-8 pb-4 font-bold">Synopsis</h3>
@@ -43,43 +42,43 @@
       <h3 class="text-white pt-8 px-8 pb-4 font-bold">Cast</h3>
       <div class="flex flex-wrap px-8">
         <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
                 <div class="text-white">
-          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="trailer">
+          <img class="w-20 h-20 m-4 rounded-full" src="https://yts.mx/assets/images/movies/2021_and_done_with_snoop_dogg_kevin_hart_2021/large-cover.jpg" alt="Actor">
           <p class="font-bold text-lg">Actor Name</p>
         </div>
       </div>
@@ -105,6 +104,7 @@ export default {
       movie: [],
       related: [],
       genres: [],
+      yt_trailer: '',
       status: false,
       status_message: '',
       r_status: false,
@@ -112,24 +112,53 @@ export default {
       r_total_movies: 0
     }
   },
-  created () {
-    axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${this.$route.params.id}`).then(response => {
-      this.movie = response.data.data.movie
-      this.genres = this.movie.genres
-      this.status = response.data.status
-      this.status_message = response.data.status_message
-      console.log(this.genres)
-    }).catch(error => {
-      console.log('There is an Error : ' + error.response)
-    })
-    axios.get(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${this.$route.params.id}`).then(response => {
-      this.related = response.data.data.movies
-      this.r_status = response.data.status
-      this.r_status_message = response.data.status_message
-      this.r_total_movies = response.data.data.movie_count
-    }).catch(error => {
-      console.log('There is an Error : ' + error.response)
-    })
+  // created () {
+  //   axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${this.$route.params.id}`).then(response => {
+  //     this.movie = response.data.data.movie
+  //     this.genres = this.movie.genres
+  //     this.status = response.data.status
+  //     this.status_message = response.data.status_message
+  //     this.yt_trailer = 'http://www.youtube.com/embed/' + response.data.data.movie.yt_trailer_code
+  //   }).catch(error => {
+  //     console.log('There is an Error : ' + error.response)
+  //   })
+  //   axios.get(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${this.$route.params.id}`).then(response => {
+  //     this.related = response.data.data.movies
+  //     this.r_status = response.data.status
+  //     this.r_status_message = response.data.status_message
+  //     this.r_total_movies = response.data.data.movie_count
+  //   }).catch(error => {
+  //     console.log('There is an Error : ' + error.response)
+  //   })
+  // },
+  methods: {
+    onCardClick (event) {
+      this.id = event
+      this.getData(this.id)
+    },
+    async getData (id) {
+      await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`).then(response => {
+        this.movie = response.data.data.movie
+        this.genres = this.movie.genres
+        this.status = response.data.status
+        this.status_message = response.data.status_message
+        this.yt_trailer = 'http://www.youtube.com/embed/' + response.data.data.movie.yt_trailer_code
+      }).catch(error => {
+        console.log('There is an Error : ' + error.response)
+      })
+      await axios.get(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${id}`).then(response => {
+        this.related = response.data.data.movies
+        this.r_status = response.data.status
+        this.r_status_message = response.data.status_message
+        this.r_total_movies = response.data.data.movie_count
+      }).catch(error => {
+        console.log('There is an Error : ' + error.response)
+      })
+    }
+  },
+  mounted () {
+    this.id = this.$route.params.id
+    this.getData(this.id)
   }
 }
 </script>
