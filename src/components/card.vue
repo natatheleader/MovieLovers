@@ -3,7 +3,7 @@
     <router-link :to='"/detail/" + id'>
       <div class="min-w-min bg-secondary relative rounded-lg">
         <img class="h-full w-full rounded-lg" :src=image />
-        <div class="bg-black bg-opacity-50 absolute inset-x-0 bottom-0 rounded-b-lg">
+        <div class="bg-black bg-opacity-50 absolute inset-x-0 bottom-0 rounded-b-lg py-2">
           <div class="m-1">
             <p class="text-base font-bold">{{ m_title}}</p>
             <p v-snip="2"> {{ description }}</p>
@@ -13,7 +13,7 @@
               <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
               <li><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li>
               <li><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li>
-              <p> {{ rating }} / 10</p>
+              <p class="text-sm"> {{ rating }} / 10</p>
             </ul>
           </div>
         </div>
