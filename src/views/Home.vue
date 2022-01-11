@@ -4,7 +4,7 @@
     <div>
       <div class="bg-primary h-full">
         <h3 class="text-white p-8 font-bold">Trending Movies</h3>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid md:grid-cols-4 gap-2">
           <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
         <div class="mt-8 grid place-content-center">

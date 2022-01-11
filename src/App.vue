@@ -1,7 +1,7 @@
 <template>
     <div class="font-display">
         <div class="grid grid-cols-5">
-            <aside class="bg-primary h-full">
+            <aside class="bg-primary md:invisible h-full">
                 <!-- sidebar -->
                 <SideNav />
             </aside>
@@ -11,7 +11,7 @@
                 <router-view></router-view>
             </div>
 
-            <div class="bg-primary h-full">
+            <div class="bg-primary md:invisible h-full">
                 <!-- sidebar -->
             </div>
         </div>
