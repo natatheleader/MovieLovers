@@ -1,13 +1,19 @@
 <template>
   <div>
     <div class="bg-gradient-to-b from-primary via-secondary to-primary">
+      <div id="nav" class="text-center">
+        <router-link class="p-5 bold decoration-red-50 text-white hover:underline" active-class="decoration-red-50 underline" to="/">Home</router-link>
+        <router-link class="p-5 bold decoration-red-50 text-white hover:underline" active-class="decoration-red-50 underline" to="/movies">Movies</router-link>
+        <!-- <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/tvShows">TvShows</router-link>
+        <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/anime">Anime</router-link> -->
+      </div>
       <div>
-        <div class="grid place-content-center pt-4">
+        <div class="grid place-content-center py-4">
           <img src="../assets/Logo/logo.png" alt="Logo" />
         </div>
-        <div class="flex flex-row p-8">
+        <div class="sm:flex sm:flex-row p-8">
           <div>
-            <img class="h-80 rounded-lg" :src=movie.large_cover_image alt="Image Cover">
+            <img class="sm:h-80 rounded-lg" :src=movie.large_cover_image alt="Image Cover">
           </div>
           <div class="text-white m-8">
             <p class="text-sm">Movie Title</p>
@@ -57,7 +63,7 @@
       </div>
 
       <h3 class="text-white pt-8 px-8 pb-4 font-bold">Similar Movies</h3>
-      <div class="grid grid-cols-3 gap-3 px-8">
+      <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
         <Card v-for="movie in related" :key="movie.id" :id="movie.id" :image="movie.medium_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
       </div>
     </div>

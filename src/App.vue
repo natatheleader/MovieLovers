@@ -1,17 +1,17 @@
 <template>
     <div class="font-display">
-        <div class="grid grid-cols-5">
-            <aside class="bg-primary h-full">
+        <div class="lg:grid lg:grid-cols-5">
+            <aside class="bg-primary h-full hidden lg:inline">
                 <!-- sidebar -->
                 <SideNav />
             </aside>
 
-            <div class="col-span-3">
+            <div class="lg:col-span-3">
                 <!-- routerView -->
                 <router-view></router-view>
             </div>
 
-            <div class="bg-primary h-full">
+            <div class="bg-primary h-full hidden lg:inline">
                 <!-- sidebar -->
             </div>
         </div>

@@ -4,11 +4,11 @@
     <div>
       <div class="bg-primary h-full">
         <h3 class="text-white p-8 font-bold">All Movies</h3>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
 
-        <div class="pb-8">
+        <div class="pb-8 px-8 sm:px-2">
           <VueTailwindPagination
             :current="currentPage"
             :total="total"

@@ -4,16 +4,19 @@
     <div>
       <div class="bg-primary h-full">
         <h3 class="text-white p-8 font-bold">Trending Movies</h3>
-        <div class="grid grid-cols-4 gap-2">
+        <div v-if="!result" class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
-        <div class="mt-8 grid place-content-center">
+        <div v-else class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
+          <Card v-for="movie in searched" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
+        </div>
+        <div class="py-8 grid place-content-center">
           <router-link class="bg-secondary hover:bg-red-900 text-white font-bold py-4 px-4 rounded" to="/movies">All Movies</router-link>
         </div>
-        <h3 class="text-white p-8 font-bold">Trending Shows</h3>
-        <div class="grid grid-cols-3 gap-3">
+        <!-- <h3 class="text-white p-8 font-bold">Trending Shows</h3>
+        <div class="lg:grid lg:grid-cols-3 lg:gap-3">
           <Card />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -26,6 +29,7 @@ import Hero from '@/components/hero.vue'
 
 export default {
   name: 'app',
+  props: ['result', 'searched'],
   components: {
     Card,
     Hero
@@ -47,15 +51,15 @@ export default {
     }).catch(error => {
       console.log('There is an Error : ' + error.response)
     })
-    axios.get('https://oneom.is/serial/9', {
-      headers: {
-        Accepts: 'Application/json'
-      }
-    }).then(response => {
-      console.log(response.data)
-    }).catch(error => {
-      console.log('There is an Error : ' + error.response)
-    })
+    // axios.get('https://oneom.is/serial/9', {
+    //   headers: {
+    //     Accepts: 'Application/json'
+    //   }
+    // }).then(response => {
+    //   console.log(response.data)
+    // }).catch(error => {
+    //   console.log('There is an Error : ' + error.response)
+    // })
   }
 }
 </script>
