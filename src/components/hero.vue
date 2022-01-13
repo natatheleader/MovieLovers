@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     searchMonitor: function () {
-      // var keyword = this.toFormData(this.search)
       axios.get(`https://yts.mx/api/v2/list_movies.json?query_term=${this.search.keyword}`).then(response => {
         this.searched = response.data.data.movies
 
@@ -46,6 +45,9 @@ export default {
         }
         console.log(this.searched, this.search.keyword, this.result, response.data.data.movie_count)
       })
+      console.log(this.searched, this.search.keyword, this.result)
+
+      this.$emit('update:result', this.result, this.searched)
     },
 
     toFormData: function (obj) {

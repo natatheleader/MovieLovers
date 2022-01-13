@@ -1,14 +1,14 @@
 <template>
   <div>
-    <hero />
+    <hero @update:result='updated' />
     <div>
       <div class="bg-primary h-full">
         <h3 class="text-white p-8 font-bold">Trending Movies</h3>
-        <div v-if="!result" class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
+        <div v-if="!hResult" class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
         <div v-else class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
-          <Card v-for="movie in searched" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
+          <Card v-for="movie in hSearched" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
         <div class="py-8 grid place-content-center">
           <router-link class="bg-secondary hover:bg-red-900 text-white font-bold py-4 px-4 rounded" to="/movies">All Movies</router-link>
@@ -37,6 +37,8 @@ export default {
   data () {
     return {
       movies: [],
+      hSearched: [],
+      hResult: false,
       status: false,
       status_message: '',
       total_movies: 0
@@ -60,6 +62,13 @@ export default {
     // }).catch(error => {
     //   console.log('There is an Error : ' + error.response)
     // })
+  },
+  methods: {
+    updated: function (result, searched) {
+      this.hResult = result
+      this.hSearched = searched
+      // console.log(this.hResult, this.hSearched)
+    }
   }
 }
 </script>
