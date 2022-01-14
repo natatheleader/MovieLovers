@@ -105,8 +105,6 @@ export default {
         this.status_message = response.data.status_message
         this.yt_trailer = 'http://www.youtube.com/embed/' + response.data.data.movie.yt_trailer_code
         this.casts = response.data.data.movie.cast
-        console.log(this.casts)
-        console.log(this.movie)
       }).catch(error => {
         console.log('There is an Error : ' + error.response)
       })
