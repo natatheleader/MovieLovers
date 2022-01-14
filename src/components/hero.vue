@@ -43,19 +43,8 @@ export default {
         } else {
           this.result = false
         }
-        console.log(this.searched, this.search.keyword, this.result, response.data.data.movie_count)
+        this.$emit('update:result', this.result, this.searched)
       })
-      console.log(this.searched, this.search.keyword, this.result)
-
-      this.$emit('update:result', this.result, this.searched)
-    },
-
-    toFormData: function (obj) {
-      var formData = new FormData()
-      for (var key in obj) {
-        formData.append(key, obj[key])
-      }
-      return formData
     }
   }
 

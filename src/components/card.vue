@@ -8,11 +8,12 @@
             <p class="text-base font-bold">{{ m_title}}</p>
             <p v-snip="2"> {{ description }}</p>
             <ul class="flex justify-center">
-              <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
-              <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
+              <li v-for="(index) in Math.round(rating/2)" v-bind:key="index"><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
+              <li v-for="(index) in (5 - Math.round(rating/2))" v-bind:key="index"><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li>
+              <!-- <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
               <li><i class="fas fa-star fa-sm text-yellow-500 mr-1"></i></li>
               <li><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li>
-              <li><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li>
+              <li><i class="far fa-star fa-sm text-yellow-500 mr-1"></i></li> -->
               <p class="text-sm"> {{ rating }} / 10</p>
             </ul>
           </div>

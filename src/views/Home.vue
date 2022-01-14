@@ -67,7 +67,6 @@ export default {
     updated: function (result, searched) {
       this.hResult = result
       this.hSearched = searched
-      // console.log(this.hResult, this.hSearched)
     }
   }
 }
