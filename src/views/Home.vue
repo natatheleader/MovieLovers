@@ -3,19 +3,20 @@
     <hero @update:result='updated' :show_s="false"/>
     <div>
       <div class="bg-primary h-full" v-if="!hResult">
-        <h3 class="text-white p-8 font-bold">Trending Movies</h3>
+        <h1 class="text-white font-bold">Movie Lovers, Get Your Movies From Here.</h1>
+        <h2 class="text-white p-8 font-bold">Trending Movies</h2>
         <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
-        <h3 class="text-white p-8 font-bold">Most Downloaded Movies</h3>
+        <h2 class="text-white p-8 font-bold">Most Downloaded Movies</h2>
         <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in m_movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
-        <h3 class="text-white p-8 font-bold">Most Liked Movies</h3>
+        <h2 class="text-white p-8 font-bold">Most Liked Movies</h2>
         <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in l_movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
-        <h3 class="text-white p-8 font-bold">Best Rated Movies</h3>
+        <h2 class="text-white p-8 font-bold">Best Rated Movies</h2>
         <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in r_movies" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>
@@ -24,7 +25,7 @@
         </div>
       </div>
       <div class="bg-primary h-full" v-else>
-        <h3 class="text-white p-8 font-bold">Results</h3>
+        <h2 class="text-white p-8 font-bold">Results</h2>
         <div class="md:grid md:grid-cols-4 md:gap-2 sm:grid sm:grid-cols-2 sm:gap-1">
           <Card v-for="movie in hSearched" :key="movie.id" :id="movie.id" :image="movie.large_cover_image" :rating="movie.rating" :description="movie.description_full" :m_title="movie.title_long" />
         </div>

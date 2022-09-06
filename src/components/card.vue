@@ -2,7 +2,7 @@
   <div class="m-5 text-white">
     <router-link :to='"/detail/" + id'>
       <div class="min-w-min bg-secondary relative rounded-lg">
-        <img class="h-full w-full rounded-lg" :src=image />
+        <img class="h-full w-full rounded-lg" :alt=m_title :src=image />
         <div class="bg-black bg-opacity-50 absolute inset-x-0 bottom-0 rounded-b-lg py-2">
           <div class="m-1">
             <p class="text-base font-bold">{{ m_title}}</p>

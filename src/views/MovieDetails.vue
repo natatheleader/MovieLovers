@@ -4,6 +4,7 @@
       <div id="nav" class="text-center">
         <router-link class="p-5 bold decoration-red-50 text-white hover:underline" active-class="decoration-red-50 underline" to="/">Home</router-link>
         <router-link class="p-5 bold decoration-red-50 text-white hover:underline" active-class="decoration-red-50 underline" to="/movies">Movies</router-link>
+        <router-link class="p-5 bold decoration-red-50 text-white hover:underline" active-class="decoration-red-50 underline" to="/browse">Browse</router-link>
         <!-- <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/tvShows">TvShows</router-link>
         <router-link class="p-5 bold decoration-red-50 text-white hover:underline" to="/anime">Anime</router-link> -->
       </div>
